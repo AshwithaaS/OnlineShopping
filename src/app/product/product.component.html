@@ -1,0 +1,70 @@
+<div class="bg-image" 
+     style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+            height: 100vh">
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Product</mat-card-title>
+      </mat-card-header>
+      <form class="example-form" (ngSubmit) = "onSubmit()">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="productName" 
+            [(ngModel)] = "product.productName" name = "ProductName">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="productDescription" 
+            [(ngModel)] = "product.productDescription" name = "productDescription">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="productPrice" 
+            [(ngModel)] = "product.productPrice" name = "productPrice">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="productUnit" 
+            [(ngModel)] = "product.productUnit" name = "productUnit">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Category" 
+            [(ngModel)] = "product.category" name = "Category">
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block">Register</button>
+      </form>
+    </mat-card>
+
+    
+  </div>
+
+    <h2>Product List</h2>
+<table class = "table table-striped">
+
+<thead>
+    <tr>
+        <th> ProductId</th>
+        <th>ProductName</th>
+        <th>ProductDescription</th>
+        <th>ProductPrice</th>
+        <th>ProductUnit</th>
+        <th>ProductCategory</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor = "let product of products " >
+       <td>{{product.productId}}</td>
+       <td>{{product.productName}}</td>
+       <td>{{product.productDescription}}</td>
+       <td>{{product.productPrice}}</td>
+       <td>{{product.productUnit}}</td>
+       <td>{{product.category}}</td>
+       <td>
+    
+           <button (click) ="deleteProduct(product.productId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+
+       </td>
+    </tr>
+</tbody>
+</table>
+</div>
+

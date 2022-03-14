@@ -1,0 +1,41 @@
+<div class="bg-image" 
+     style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+            height: 100vh">
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+      <form class="example-form" (ngSubmit) = "onSubmit()">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Userid" 
+            [(ngModel)] = "user.userId" name = "userid">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Firstname" 
+            [(ngModel)] = "user.firstName" name = "firstName">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Lastname"
+            [(ngModel)] = "user.lastName" name = "lastName">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email"
+            [(ngModel)] = "user.email" name = "email">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password"
+            [(ngModel)] = "user.password" name = "password">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Role"
+            [(ngModel)] = "user.role" name = "role">
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block">Register</button>
+      </form>
+    </mat-card>
+  </div>
+</div>

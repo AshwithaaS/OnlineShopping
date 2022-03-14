@@ -1,0 +1,30 @@
+<div class="bg-image" 
+     style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+            height: 100vh">
+<h2>Merchant List</h2>
+<table class = "table table-striped">
+ 
+    <thead>
+        <tr>
+            <th>MerchantId</th>
+            <th>FirstName</th>
+            <th>Last Name</th>
+            <th>Email Id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of user " >
+           <td>{{user.userId}}</td>
+           <td>{{user.firstName}}</td>
+           <td>{{user.lastName}}</td>
+           <td>{{user.email}}</td>
+           <td>
+        
+               <button (click) ="deleteMerchants(user.userId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+              
+           </td>
+        </tr>
+    </tbody>
+</table>
+</div>
